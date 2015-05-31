@@ -1,0 +1,46 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'rebel'
+
+sourceCompatibility = 1.7
+version = '0.0.1'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath group: 'org.zeroturnaround', name: 'gradle-jrebel-plugin', version: '1.1.2'
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://hub.spigotmc.org/nexus/content/groups/public' }
+}
+
+dependencies {
+    compile group: 'org.bukkit', name: 'bukkit', version: '1.8.3-R0.1-SNAPSHOT'
+}
+
+ext {
+    // Placeholders for configuration filtering
+    description = 'A plugin that makes sugar better!'
+    author = 'HeroCC <https://herocc.com>'
+
+    javaPackage = 'com.herocc.bukkit.snort'
+    resourceTokens = [
+            'Name'   : rootProject.name,
+            'Description': description,
+            'Version': version,
+            'Author' : author
+    ];
+}
+
+processResources {
+    include 'plugin.yml'
+    include 'config.yml'
+    include 'reference.java'
+    filter org.apache.tools.ant.filters.ReplaceTokens, tokens: resourceTokens
+}

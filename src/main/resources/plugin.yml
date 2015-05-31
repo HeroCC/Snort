@@ -1,0 +1,14 @@
+main: com.herocc.bukkit.snort.Snort
+
+name: @Name@
+version: '@Version@'
+description: "@Description@"
+
+author: '@Author@'
+
+commands:
+   snort:
+      description: Do some drugs
+      usage: /<command>
+      permission: snort.use.sugar
+      permission-message: "The law says: No Snorting!"
