@@ -1,7 +1,7 @@
 package com.herocc.bukkit.snort.commands;
 
-import com.herocc.bukkit.snort.snortEffects;
-import com.herocc.bukkit.snort.util.subtractAmount;
+import com.herocc.bukkit.snort.SnortEffects;
+import com.herocc.bukkit.snort.util.SubtractAmount;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -16,7 +16,7 @@ public class CommandSnort implements CommandExecutor {
         this.plugin = plugin;
     }
 
-    snortEffects snortEffects = new snortEffects();
+    SnortEffects snortEffects = new SnortEffects();
     public String cannotSnort = "You can't snort this!";
 
     @Override
@@ -26,13 +26,13 @@ public class CommandSnort implements CommandExecutor {
                 Player player = (Player) sender;
                 if (player.getItemInHand().getType().equals(Material.SUGAR)) {
                     snortEffects.applyEffect("sugar", player);
-                    subtractAmount.subtractOne(player);
+                    SubtractAmount.subtractOne(player);
                 } else if (player.getItemInHand().getType().equals(Material.GLOWSTONE_DUST)) {
                     snortEffects.applyEffect("glowstone", player);
-                    subtractAmount.subtractOne(player);
+                    SubtractAmount.subtractOne(player);
                 } else if (player.getItemInHand().getType().equals(Material.REDSTONE)) {
                     snortEffects.applyEffect("redstone", player);
-                    subtractAmount.subtractOne(player);
+                    SubtractAmount.subtractOne(player);
                 } else {
                     player.sendMessage(cannotSnort);
                 }

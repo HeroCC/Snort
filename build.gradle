@@ -41,6 +41,6 @@ ext {
 processResources {
     include 'plugin.yml'
     include 'config.yml'
-    include 'reference.java'
+    include 'Reference.java'
     filter org.apache.tools.ant.filters.ReplaceTokens, tokens: resourceTokens
 }

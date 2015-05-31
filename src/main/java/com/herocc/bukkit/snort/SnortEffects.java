@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-public class snortEffects {
+public class SnortEffects {
     public String message = "Woah, you trippin...";
 
     public void applyEffect(String effect, Player player) {
