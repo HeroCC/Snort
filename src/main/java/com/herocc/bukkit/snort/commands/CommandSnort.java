@@ -12,6 +12,7 @@ public class CommandSnort implements CommandExecutor {
 
     SnortEffects snortEffects = new SnortEffects();
     public String cannotSnort = "You can't snort this!";
+    public String noBots = "Robots can't do drugs!";
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
@@ -32,7 +33,7 @@ public class CommandSnort implements CommandExecutor {
                 }
             }
         } else {
-            sender.sendMessage("Robots can't do drugs!");
+            sender.sendMessage(noBots);
         }
         return true;
     }
