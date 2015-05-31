@@ -19,8 +19,8 @@ public class SnortEffects {
         } else if (effect.equals("redstone")) {
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
             player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 250, 10, false, true));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 500, 10, false, true));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 500, 10, false, true));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 500, 1, false, true));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 500, 1, false, true));
         }
     }
 }
