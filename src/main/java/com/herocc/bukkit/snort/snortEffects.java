@@ -6,7 +6,8 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 public class snortEffects {
-public String message = "Woah, you trippin...";
+    public String message = "Woah, you trippin...";
+
     public void applyEffect(String effect, Player player) {
         if (effect.equals("sugar")) {
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', message));

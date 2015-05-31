@@ -2,7 +2,6 @@ package com.herocc.bukkit.snort.commands;
 
 import com.herocc.bukkit.snort.snortEffects;
 import com.herocc.bukkit.snort.util.subtractAmount;
-
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -37,9 +36,9 @@ public class CommandSnort implements CommandExecutor {
                 } else {
                     player.sendMessage(cannotSnort);
                 }
-            } else {
-                sender.sendMessage("Robots can't do drugs!");
             }
+        } else {
+            sender.sendMessage("Robots can't do drugs!");
         }
         return true;
     }
